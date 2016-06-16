@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+  <style type="text/css">
+
+    #map { width:100%;height:380px; }
+  </style>
+</head>
+<body ng-app="PaisitasApp" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://gitcdn.link/repo/angular/bower-material/master/angular-material.js"></script>
+
+  <!-- Carga del script de la aplicacion -->
+  <script src="paisitas.js"></script>
+
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">
+    /**
+     * You must include the dependency on 'ngMaterial'
+     */
+    //angular.module('BlankApp', ['ngMaterial']);
+  </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeXKOKUWt4ATiaka57064TgDRmmwCw_mo&callback=initMap">
+    </script>
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC_61fIAZBvX7m54YmULFvJa8E179DUceo",
+    authDomain: "paisitas-1343.firebaseapp.com",
+    databaseURL: "https://paisitas-1343.firebaseio.com",
+    storageBucket: "paisitas-1343.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 17
+    });
+
+    var infoWindow = new google.maps.InfoWindow({map: map});
+
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Tu localización.');
+        map.setCenter(pos);
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+  }
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'Error: The Geolocation service failed.' :
+                          'Error: Your browser doesn\'t support geolocation.');
+  }
+
+
+</script>
+<header>
+  <md-toolbar class="md-tall">
+      <span flex></span>
+      <div flex-offset="15">
+      <h2 class="md-toolbar-tools">
+        <span class="md-flex">Paisitas Cafe</span>
+      </h2>
+    </div>
+      <span flex></span>
+  </md-toolbar>
+</header>
+    <div  layout="column" layout-align="center center" ng-controller="PaisitasController">
+      <div flex>Prueba: {{saludo}}</div>
+      <div flex id="map"></div>
+    </div>
+
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
