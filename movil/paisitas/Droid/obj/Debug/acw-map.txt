@@ -1,0 +1,4 @@
+paisitas.Droid.MainActivity, paisitas.Droid;md541332169f054e2641c36a65905ba2fa9.MainActivity
+paisitas.Droid.MainActivity, paisitas.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md541332169f054e2641c36a65905ba2fa9.MainActivity
+paisitas.Droid.MainActivity;md541332169f054e2641c36a65905ba2fa9.MainActivity
+paisitas.droid.MainActivity;md541332169f054e2641c36a65905ba2fa9.MainActivity
