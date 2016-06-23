@@ -1,14 +1,11 @@
-﻿<Properties StartupItem="Droid/paisitas.Droid.csproj">
+﻿<Properties StartupItem="Droid/paisitas.Droid.csproj" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.paisitas.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86_X86_google_apis" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Properties/AssemblyInfo.cs">
-    <Files>
-      <File FileName="Droid/MainActivity.cs" Line="10" Column="1" />
-      <File FileName="Droid/Properties/AssemblyInfo.cs" Line="27" Column="34" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/camilo/GitHub/paisitas/movil/paisitas/Droid/MainActivity.cs" line="111" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

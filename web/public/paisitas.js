@@ -7,10 +7,10 @@ paisitasApp.controller('PaisitasController', ['$scope', function ($scope){
 
 
   //dispositvos desde donde se esta conectado, si el valor es nulo, es que se esta desconectado
-  var refConexiones = firebase.database().ref('vehiculos/2/conexiones');
+  var refConexiones = firebase.database().ref('vehiculos/-KKunARFX41tKfDXP4qg/conexiones');
 
   //Se almacena el tiemstamp de la ultima conexion (la ultima vez que se estuvo conectado)
-  var refUltimaConex = firebase.database().ref('vehiculos/2/ultimaConexion');
+  var refUltimaConex = firebase.database().ref('vehiculos/-KKunARFX41tKfDXP4qg/ultimaConexion');
 
   //se trae la informacion de la conexion
   var refConexActual = firebase.database().ref('.info/connected');
