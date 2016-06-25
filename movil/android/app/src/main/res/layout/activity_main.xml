@@ -72,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Desconectado"
+            android:text=""
             android:id="@+id/textViewEstado"
             android:layout_row="4"
             android:layout_column="0" />
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buscando..."
-            android:id="@+id/textViewCoordenadas"
+            android:id="@+id/textViewPosicion"
             android:layout_row="6"
             android:layout_column="0" />
     </GridLayout>
