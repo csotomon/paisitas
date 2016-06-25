@@ -20,20 +20,13 @@ public class MainActivity extends AppCompatActivity {
         grupoPaisitas = (RadioGroup)findViewById(R.id.radioGroupPaisitas);
         grupoPaisitas.clearCheck();
 
-        botonConectar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a=1;
-                int b=2;
-            }
-        });
-
     }
 
-    /** Called when the user clicks the Send button */
-    public void sendMessage(View view) {
-        // Do something in response to button
-        int a=1;
-        int b=2;
+    public void conectar(View view) {
+
+    }
+    
+    public void desconectar(View view) {
+
     }
 }
