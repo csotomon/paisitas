@@ -1,10 +1,37 @@
 ﻿<Properties StartupItem="Droid/paisitas.Droid.csproj" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.ItemProperties.paisitas.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86_X86_google_apis" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.ItemProperties.paisitas.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86_X86_google_apis" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="paisitas" expanded="True">
+            <Node name="paisitas.Droid" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True">
+                <Node name="Xamarin.Firebase.Database.Connection" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="paisitas" expanded="True">
+            <Node name="paisitas.Droid" expanded="True">
+              <Node name="References" expanded="True">
+                <Node name="Xamarin.Firebase.Common" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/camilo/GitHub/paisitas/movil/paisitas/Droid/MainActivity.cs" line="111" column="1" />
+      <Breakpoint file="/Users/camilo/GitHub/paisitas/movil/paisitas/Droid/MainActivity.cs" line="113" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

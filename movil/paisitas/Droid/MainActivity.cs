@@ -9,11 +9,9 @@ using Android.Locations;
 using System.Collections.Generic;
 using paisitas.Droid.util;
 using Android.Util;
-using FireSharp.Interfaces;
-using FireSharp.Config;
-using FireSharp;
-using FireSharp.Response;
 using Java.Util;
+using Android.Gms.Common;
+using Android.Gms.Common.Apis;
 
 namespace paisitas.Droid
 {
@@ -40,7 +38,7 @@ namespace paisitas.Droid
 
 			botonDesconectar.Enabled = false;
 
-
+			MapView mv;
 
 			botonConectar.Click += (object sender, EventArgs e) =>
 			{
