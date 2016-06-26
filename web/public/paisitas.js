@@ -2,10 +2,10 @@ var paisitasApp=angular.module('PaisitasApp', ['ngMaterial']);
 
 paisitasApp.controller('PaisitasController', ['$scope', function ($scope){
   $scope.vehiculos = [];
-  $scope.saludo = "Hola mundo cruel2";
+  $scope.saludo = "";
   var markers = [];
 
-
+  /*
   //dispositvos desde donde se esta conectado, si el valor es nulo, es que se esta desconectado
   var refConexiones = firebase.database().ref('vehiculos/-KKunARFX41tKfDXP4qg/conexiones');
 
@@ -32,9 +32,28 @@ paisitasApp.controller('PaisitasController', ['$scope', function ($scope){
       console.log("desconectado");
     }
   });
+*/
+
+  function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);
+    }
+  }
+
+  // Deletes all markers in the array by removing references to them.
+  function deleteMarkers() {
+    clearMarkers();
+    markers = [];
+  }
+
+  // Removes the markers from the map, but keeps them in the array.
+  function clearMarkers() {
+    setMapOnAll(null);
+  }
 
   var queryVehiculos = firebase.database().ref("vehiculos").orderByKey();
   queryVehiculos.on('value', function(snapshot){
+    deleteMarkers();
     snapshot.forEach(function(childSnapshot) {
       var key = childSnapshot.key;
       // childData will be the actual contents of the child
@@ -44,8 +63,8 @@ paisitasApp.controller('PaisitasController', ['$scope', function ($scope){
         {
           console.log(childData.coordenadas);
           var pos = {
-            lat: childData.coordenadas.latitud,
-            lng: childData.coordenadas.longitud
+            lat: childData.latitud,
+            lng: childData.longitud
           };
 
           var marker = new google.maps.Marker({
@@ -55,10 +74,11 @@ paisitasApp.controller('PaisitasController', ['$scope', function ($scope){
           });
 
           var infowindow = new google.maps.InfoWindow({
-            content: childData.nombre
+            content: key
           });
 
           infowindow.open(map, marker);
+          markers.push(marker);
         }
 
     });

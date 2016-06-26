@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "258805194181",
+    "firebase_url": "https://paisitas-1343.firebaseio.com",
+    "project_id": "paisitas-1343",
+    "storage_bucket": "paisitas-1343.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258805194181:android:8a978911a32eaabb",
+        "android_client_info": {
+          "package_name": "com.cycit.paisitas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258805194181-bgi57c6esmvldhpd6dd2b6j4bad7mskf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUc3TVNQxExG3QUjrAG9ulgWX9a2-1b-o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258805194181:android:1b030941f57e6c5c",
+        "android_client_info": {
+          "package_name": "com.cyc.itsolutions.paisitas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258805194181-bgi57c6esmvldhpd6dd2b6j4bad7mskf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUc3TVNQxExG3QUjrAG9ulgWX9a2-1b-o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
